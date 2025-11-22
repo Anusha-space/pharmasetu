@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* PharmaSetu Color Palette */
+    --background: 198 100% 98%; /* Cloud White #F6F9FC */
+    --foreground: 200 30% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 30% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 30% 25%;
+
+    /* Pharma Blue #2D6F9E */
+    --primary: 200 56% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Healing Green #4EB69B */
+    --secondary: 166 45% 51%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 200 40% 96%;
+    --muted-foreground: 200 20% 50%;
+
+    /* Soft Coral #F57C73 */
+    --accent: 4 88% 71%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Gentle Yellow #F7D27A */
+    --tertiary: 43 89% 72%;
+    --tertiary-foreground: 200 30% 25%;
+    
+    --quaternary: 166 45% 51%;
+    --quaternary-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 30% 88%;
+    --input: 200 30% 88%;
+    --ring: 200 56% 40%;
+    
+    /* PharmaSetu Gradients - Soft, organic, warm */
+    --gradient-primary: linear-gradient(135deg, hsl(200 56% 40%), hsl(166 45% 51%));
+    --gradient-hero: linear-gradient(135deg, hsl(198 100% 98%), hsl(166 45% 95%), hsl(200 56% 95%));
+    --gradient-accent: linear-gradient(120deg, hsl(166 45% 95%), hsl(198 100% 98%));
+    --gradient-feature: linear-gradient(135deg, hsl(0 0% 100%), hsl(198 100% 98%));
+    --gradient-vibrant: linear-gradient(135deg, hsl(4 88% 71%), hsl(43 89% 72%), hsl(166 45% 51%));
+    --gradient-secondary: linear-gradient(120deg, hsl(200 56% 40%), hsl(166 45% 51%));
+    --gradient-soft: linear-gradient(180deg, hsl(198 100% 98%), hsl(0 0% 100%));
+    --gradient-warm: linear-gradient(135deg, hsl(43 89% 95%), hsl(4 88% 95%));
+    --shadow-card: 0 4px 20px -2px hsl(200 56% 40% / 0.08);
+    --shadow-elevated: 0 10px 40px -10px hsl(200 56% 40% / 0.15);
+    --shadow-glow: 0 0 40px hsl(166 45% 51% / 0.2);
+    --shadow-colorful: 0 8px 30px -5px hsl(4 88% 71% / 0.25);
+
+    --radius: 0.5rem;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 200 30% 10%;
+    --foreground: 198 30% 95%;
+
+    --card: 200 28% 14%;
+    --card-foreground: 198 30% 95%;
+
+    --popover: 200 28% 14%;
+    --popover-foreground: 198 30% 95%;
+
+    --primary: 200 56% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 166 45% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 200 25% 20%;
+    --muted-foreground: 200 20% 65%;
+
+    --accent: 4 88% 65%;
+    --accent-foreground: 0 0% 100%;
+    
+    --tertiary: 43 89% 65%;
+    --tertiary-foreground: 200 30% 10%;
+    
+    --quaternary: 166 45% 45%;
+    --quaternary-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 198 30% 95%;
+
+    --border: 200 25% 20%;
+    --input: 200 25% 20%;
+    --ring: 200 56% 50%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(200 56% 50%), hsl(166 45% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(200 30% 12%), hsl(166 45% 15%), hsl(200 56% 12%));
+    --gradient-accent: linear-gradient(120deg, hsl(200 25% 20%), hsl(200 30% 14%));
+    --gradient-feature: linear-gradient(135deg, hsl(200 28% 14%), hsl(200 30% 12%));
+    --gradient-vibrant: linear-gradient(135deg, hsl(4 88% 30%), hsl(43 89% 35%), hsl(166 45% 25%));
+    --gradient-secondary: linear-gradient(120deg, hsl(200 56% 25%), hsl(166 45% 25%));
+    --gradient-soft: linear-gradient(180deg, hsl(200 30% 14%), hsl(200 30% 10%));
+    --gradient-warm: linear-gradient(135deg, hsl(43 89% 20%), hsl(4 88% 20%));
+    --shadow-card: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
+    --shadow-elevated: 0 10px 40px -10px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 40px hsl(166 45% 45% / 0.25);
+    --shadow-colorful: 0 8px 30px -5px hsl(4 88% 50% / 0.3);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
