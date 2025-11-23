@@ -54,7 +54,7 @@ const Navbar = () => {
               Competitive Exams
             </Link>
 
-            <Link to="/subscription-policy" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
+            <Link to="/subscriptions" className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium">
               Subscription Policy
             </Link>
           </div>
