@@ -3,6 +3,8 @@ import { Card } from "@/components/ui/card";
 import { GraduationCap, Building2, ArrowRight } from "lucide-react";
 import studentsImage from "@/assets/students-collab.jpg";
 import companyImage from "@/assets/company-office.jpg";
+import { Link } from "react-router-dom";
+
 
 const TargetAudience = () => {
   return (
@@ -52,10 +54,17 @@ const TargetAudience = () => {
               </li>
             </ul>
             
-            <Button size="lg" className="w-full group bg-gradient-primary hover:opacity-90">
-              Join as a Professional
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+           <Button
+  asChild
+  size="lg"
+  className="w-full group bg-gradient-primary hover:opacity-90"
+>
+  <Link to="/signin">
+    Join as a Professional
+    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+  </Link>
+</Button>
+
           </Card>
           
           <Card className="p-8 border-accent/30 hover:shadow-colorful transition-all duration-300 bg-card/90 backdrop-blur overflow-hidden">
@@ -91,10 +100,17 @@ const TargetAudience = () => {
               </li>
             </ul>
             
-            <Button size="lg" className="w-full group bg-gradient-secondary hover:opacity-90">
-              Register Your Company
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Button
+  asChild
+  size="lg"
+  className="w-full group bg-gradient-secondary hover:opacity-90"
+>
+  <Link to="/signin">
+    Register Your Company
+    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+  </Link>
+</Button>
+
           </Card>
         </div>
       </div>

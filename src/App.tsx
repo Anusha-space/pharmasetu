@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Opportunities from "./pages/Opportunities";
@@ -15,6 +16,11 @@ import CompetitiveExams from "./pages/CompetitiveExams";
 import AICareerPath from "./pages/AICareerPath";
 import AIResumeBuilder from "./pages/AIResumeBuilder";
 import NotFound from "./pages/NotFound";
+import Grants from "./pages/Grants";
+import References from "./pages/References";
+import SignIn from "./pages/SignIn";
+
+import FloatingAd from "@/components/FloatingAd";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +30,9 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        {/* ✅ Floating ad visible on all pages */}
+        <FloatingAd />
+
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
@@ -36,7 +45,12 @@ const App = () => (
           <Route path="/resources" element={<Resources />} />
           <Route path="/ai-career-path" element={<AICareerPath />} />
           <Route path="/ai-resume-builder" element={<AIResumeBuilder />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/grants" element={<Grants />} />
+          <Route path="/references" element={<References />} />
+          <Route path="/signin" element={<SignIn />} />
+
+
+          {/* Always keep this last */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
